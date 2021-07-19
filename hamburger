@@ -1,0 +1,67 @@
+<section class="nav-btn">
+                <div class="menu-btn">
+                <div class="menu-bt__berger"></div>
+            </section>
+
+    
+
+
+
+
+
+
+    section {
+  background: black;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+.menu-btn {
+  background-color: black;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  transition: all 0.9s ease-in-out;
+  border-radius: 26%;
+}
+.menu-bt__berger {
+  width: 30px;
+  height: 4px;
+  background: darkslategray;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-bt__berger::before,
+.menu-bt__berger::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: darkslategray;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.menu-bt__berger::before {
+  transform: translateY(-16px);
+}
+.menu-bt__berger::after {
+  transform: translateY(16px);
+}
+/*ANIMATION*/
+.menu-btn.open .menu-bt__berger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-bt__berger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-bt__berger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
